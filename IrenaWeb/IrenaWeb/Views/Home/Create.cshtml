@@ -1,1 +1,49 @@
-﻿<h2>Crear Historia Clinica</h2>
+﻿@model IrenaWeb.Models.HistoriaClinica
+
+<h2>Crear Historia Clinica</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Historia clinica</legend>
+
+        <div>
+            <div class="editor-label form-input-field">
+                @Html.LabelFor(model => model.Nombre, "Nombre")
+            </div>
+            <div class="editor-label form-input-field">
+                @Html.TextBoxFor(model => model.Nombre)
+            </div>
+        </div>
+
+        <div>
+            <div class="editor-label form-input-field">
+                @Html.LabelFor(model => model.Apellido, "Apellido")
+            </div>
+            <div class="editor-label form-input-field">
+                @Html.TextBoxFor(model => model.Apellido)
+            </div>
+        </div>
+
+        <div>
+            <div class="editor-label form-input-field">
+                @Html.LabelFor(model => model.Edad, "Edad")
+            </div>
+            <div class="editor-label form-input-field">
+                @Html.TextBoxFor(model => model.Edad)
+            </div>
+        </div>
+
+        <div>
+            <div class="editor-label form-input-field">
+                @Html.LabelFor(model => model.Genero, "Genero")
+            </div>
+            <div class="editor-label form-input-field">
+                @Html.TextBoxFor(model => model.Genero)
+            </div>
+        </div>
+
+        <input type="submit" value="Crear" />
+        @Html.ActionLink("Cancelar", "Index", "Home")
+    </fieldset>
+}
