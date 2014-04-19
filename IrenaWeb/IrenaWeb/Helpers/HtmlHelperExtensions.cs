@@ -36,8 +36,8 @@
                 bitmap.Save(stream, ImageFormat.Gif);
 
                 var img = new TagBuilder("img");
-                img.MergeAttribute("alt", "your alt tag");
-                img.Attributes.Add("src", String.Format("data:image/gif;base64,{0}",
+                img.MergeAttribute("alt", "Su código QR no puede ser mostrado");
+                img.Attributes.Add("src", string.Format("data:image/gif;base64,{0}",
                     Convert.ToBase64String(stream.ToArray())));
 
                 return MvcHtmlString.Create(img.ToString(TagRenderMode.SelfClosing));
