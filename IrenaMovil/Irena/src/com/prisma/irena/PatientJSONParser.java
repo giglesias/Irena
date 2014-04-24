@@ -26,13 +26,25 @@ public class PatientJSONParser {
 				String value = jPatient.optString(key);
 				map.put(key, value);
 			}
-
-			listData.add(map);
 		} catch (JSONException e) {
-			Log.d("JSONException", e.toString());
-		} finally {
-			listData = null;
-		}
+			e.printStackTrace();
+		} 
+		listData.add(map);
 		return listData;
+	}
+	
+	public List<String> toListString (String strJson){
+		List<String> data = new ArrayList<String>();
+		try {
+			JSONObject jPatient = new JSONObject(strJson);
+			for (Iterator keyIterator = jPatient.keys(); keyIterator.hasNext();) {
+				String key = (String) keyIterator.next();
+				String value = jPatient.optString(key);
+				data.add(key + ": " + value);
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		} 
+		return data;
 	}
 }
