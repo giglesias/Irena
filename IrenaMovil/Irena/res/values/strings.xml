@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Irena</string>
+    <string name="action_settings">Settings</string>
+    <string name="BtnScan">Escanear</string>
+    <string name="camera_unavailable">La cámara trasera no está disponible.</string>
+    <string name="txtScanInfo">Para escanear un código QR presione el botón escanear</string>
+    <string name="title_activity_patient_detail">Paciente</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
