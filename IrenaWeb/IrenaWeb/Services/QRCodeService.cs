@@ -1,4 +1,4 @@
-﻿namespace IrenaWeb.Helpers
+﻿namespace IrenaWeb.Services
 {
     using System;
     using System.Drawing.Imaging;
@@ -6,16 +6,15 @@
     using System.Web;
     using System.Web.Mvc;
 
-    using Newtonsoft.Json;
-
     using IrenaWeb.Models;
 
+    using Newtonsoft.Json;
     using ZXing;
     using ZXing.Common;
 
-    public static class HtmlHelperExtensions
+    public class QrCodeService : IQrCodeService
     {
-        public static IHtmlString GenerateRelayQrCode(this HistoriaClinica medicalHistory, int height = 250, int width = 250, int margin = 0)
+        public IHtmlString GenerateRelayQrCode(HistoriaClinica medicalHistory, int height = 250, int width = 250, int margin = 0)
         {
             var medicalHistoryJson = JsonConvert.SerializeObject(medicalHistory);
 
