@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity {
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+					.add(R.id.container, new MainFragment()).commit();
 		}
 	}
 
@@ -94,10 +94,10 @@ public class MainActivity extends ActionBarActivity {
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
-	public static class PlaceholderFragment extends Fragment {
+	public static class MainFragment extends Fragment {
 
 		
-		public PlaceholderFragment() {
+		public MainFragment() {
 		}
 
 		@Override
